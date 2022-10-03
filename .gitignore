@@ -1,0 +1,16 @@
+obj/osx/Debug/src/*.o
+obj/osx/Release/src/*.o
+obj/osx/Release/src/*.d
+obj/osx/Debug/src/*.d
+bin/CarsLectures2022.app/Contents/Info.plist
+.vscode/*.db
+CarsLectures2022.xcodeproj/*
+bin/CarsLectures2022_debug.app/Contents/Info.plist
+bin/CarsLectures2022.app/Contents/MacOS/CarsLectures2022
+bin/CarsLectures2022_debug.app/Contents/MacOS/CarsLectures2022_debug
+bin/CarsLectures2022.app/Contents/Frameworks/libfmod.dylib
+bin/CarsLectures2022_debug.app/Contents/Frameworks/libfmod.dylib
+.vscode/browse.*
+openFrameworks-Info.plist
+obj/osx/Release/.compiler_flags
+obj/osx/Debug/.compiler_flags
