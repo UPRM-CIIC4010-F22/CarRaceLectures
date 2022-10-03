@@ -21,8 +21,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		int xCarPos;
-		int yCarPos;
+		int carXPos;
+		int carYPos;
 		int carSpeed;
+		int carDirection;
 		
 };

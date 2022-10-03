@@ -3,24 +3,30 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-    this->xCarPos = 0;
-    this->yCarPos = 0;
+    this->carXPos = 0;
+    this->carYPos = 0;
     this->carSpeed = 5;
+    this->carDirection = 1;
 
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-    this->xCarPos += this->carSpeed;
+    if (((this->carDirection == 1) && (this->carXPos + 60 >= ofGetWidth())) ||
+        ((this->carDirection == -1) && (this->carXPos <= 0))) {
 
+        this->carDirection *= -1;
+    } else {
+        this->carXPos += this->carDirection * this->carSpeed;
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-    double x = this->xCarPos;
-    double y = this->yCarPos;
+    double x = this->carXPos;
+    double y = this->carYPos;
     // Draw body
     ofSetBackgroundColor(ofColor::white);
     ofSetColor(ofColor::red);
