@@ -3,18 +3,24 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+    this->xCarPos = 0;
+    this->yCarPos = 0;
+    this->carSpeed = 5;
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+
+    this->xCarPos += this->carSpeed;
 
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-    double x = 0;
-    double y = 0;
+    double x = this->xCarPos;
+    double y = this->yCarPos;
     // Draw body
     ofSetBackgroundColor(ofColor::white);
     ofSetColor(ofColor::red);
