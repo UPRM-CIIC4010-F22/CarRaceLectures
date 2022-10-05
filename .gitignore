@@ -14,3 +14,5 @@ bin/CarsLectures2022_debug.app/Contents/Frameworks/libfmod.dylib
 openFrameworks-Info.plist
 obj/osx/Release/.compiler_flags
 obj/osx/Debug/.compiler_flags
+obj/*
+bin/*
