@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "Car.h"
+#include <vector>
 class ofApp : public ofBaseApp
 {
 
@@ -22,5 +23,7 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 
-	Car firstCar;
+	// Car firstCar;
+	vector<Car> cars;
+	int count;
 };

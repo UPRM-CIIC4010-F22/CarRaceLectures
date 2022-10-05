@@ -3,28 +3,38 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-    firstCar = Car(0, 0, 5, 1);
+    count = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        cars.push_back(Car(0, i * 40, ofRandom(10), 1));
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
-
-    if (((firstCar.getDirection() == 1) && (firstCar.getXpos() + firstCar.getWidth() >= ofGetWidth())) ||
-        ((firstCar.getDirection() == -1) && (firstCar.getXpos() <= 0)))
+    count++;
+    for (int i = 0; i < cars.size(); i++)
     {
-        firstCar.setDirection(firstCar.getDirection() * -1);
-    }
-    else
-    {
-        firstCar.setXpos(firstCar.getXpos() + firstCar.getSpeed() * firstCar.getDirection());
+        if (((cars[i].getDirection() == 1) && (cars[i].getXpos() + cars[i].getWidth() >= ofGetWidth())) ||
+            ((cars[i].getDirection() == -1) && (cars[i].getXpos() <= 0)))
+        {
+            cars[i].setDirection(cars[i].getDirection() * -1);
+        }
+        else
+        {
+            if (count % 60 == 0)
+                cars[i].setSpeed(ofRandom(10));
+            cars[i].setXpos(cars[i].getXpos() + cars[i].getSpeed() * cars[i].getDirection());
+        }
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-    firstCar.draw();
+    for (int i = 0; i < cars.size(); i++)
+        cars[i].draw();
 }
 
 //--------------------------------------------------------------
