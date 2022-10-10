@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "Car.h"
+#include "PoliceCar.h"
 #include <vector>
 class ofApp : public ofBaseApp
 {
@@ -23,6 +24,6 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 
-	vector<Car> cars;
+	vector<PoliceCar> cars;
 	bool raceFinished;
 };

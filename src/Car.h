@@ -3,7 +3,7 @@
 
 class Car
 {
-private:
+protected:
     int xPos;
     int yPos;
     int speed;

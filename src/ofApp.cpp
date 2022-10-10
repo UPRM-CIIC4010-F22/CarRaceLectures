@@ -4,7 +4,7 @@
 void ofApp::setup() {
     ofSetBackgroundColor(ofColor::white);
     for (int i = 0; i < 10; i++) {
-        cars.push_back(Car(0, i * 40, ofRandom(5), 1));
+        cars.push_back(PoliceCar(0, i * 40 + 10, ofRandom(5), 1));
     }
     raceFinished = false;
 }
