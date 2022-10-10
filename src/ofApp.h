@@ -23,7 +23,6 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 
-	// Car firstCar;
 	vector<Car> cars;
-	int count;
+	bool raceFinished;
 };

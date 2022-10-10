@@ -4,7 +4,6 @@ void Car::draw()
 {
 
     // Draw body
-    ofSetBackgroundColor(ofColor::white);
     ofSetColor(color);
     ofDrawRectangle(xPos + 0, yPos + 10, width, 10);
     // Draw roof and windshields
