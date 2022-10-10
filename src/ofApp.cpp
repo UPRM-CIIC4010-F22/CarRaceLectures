@@ -22,6 +22,15 @@ void ofApp::update() {
             cars[i].setXpos(cars[i].getXpos() + ofRandom(5) * cars[i].getDirection());
         }
     }
+
+    int leadingCarPosition = 0;
+    for(int i=0; i<cars.size(); i++){
+        cars[i].setColor(ofColor::red);
+        if(cars[i].getXpos() > cars[leadingCarPosition].getXpos())
+            leadingCarPosition = i;
+    }
+    cars[leadingCarPosition].setColor(ofColor::green);
+
 }
 
 //--------------------------------------------------------------
