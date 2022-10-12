@@ -45,5 +45,5 @@ public:
         this->width = 60;
     }
 
-    void draw();
+    virtual void draw();
 };
