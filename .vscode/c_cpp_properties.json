@@ -139,7 +139,7 @@
                     "${workspaceRoot}/../../../libs/openFrameworks"
                 ]
             },
-            "intelliSenseMode": "clang-x64",
+            "intelliSenseMode": "windows-gcc-x86",
             "compilerPath": "C:/msys64/mingw32/bin/g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17"
