@@ -24,6 +24,6 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 
-	vector<Car*> cars;
+	vector<Vehicle*> cars;
 	bool raceFinished;
 };
