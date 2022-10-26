@@ -2,16 +2,20 @@
 #include "Car.h"
 #include "PoliceCar.h"
 #include "Truck.h"
+#include "Fish.h"
 
 //--------------------------------------------------------------
 void ofApp::setup() {
     ofSetBackgroundColor(ofColor::white);
     for (int i = 0; i < 10; i++) {
-        if(i % 3 == 0)
+        if (i % 4 == 0)
             cars.push_back(new PoliceCar(0, i * 40 + 10, ofRandom(5), 1));
-        else if (i % 3 == 1) 
-                    cars.push_back(new Truck(0, i * 40 + 10, ofRandom(5), 1));
-        else cars.push_back(new Car(0, i * 40 + 10, ofRandom(5), 1));
+        else if (i % 4 == 1)
+            cars.push_back(new Truck(0, i * 40 + 10, ofRandom(5), 1));
+        else if (i % 4 == 2)
+            cars.push_back(new Fish(0, i * 40 + 10, ofRandom(5), 1));
+        else
+            cars.push_back(new Car(0, i * 40 + 10, ofRandom(5), 1));
     }
     raceFinished = false;
 }
