@@ -12,12 +12,12 @@ class Vehicle : public Raceable {
     ofColor color;
 
    public:
-    int getXpos() { return xPos; }
-    int getYpos() { return yPos; }
-    int getSpeed() { return speed; }
+    int getXpos() const { return xPos; }
+    int getYpos() const { return yPos; }
+    int getSpeed() const { return speed; }
     int getDirection() { return direction; }
-    int getWidth() { return width; }
-    ofColor getColor() { return color; }
+    int getWidth() const { return width; }
+    ofColor getColor() const { return color; }
 
     void setXpos(int x) { xPos = x; }
     void setYPos(int y) { yPos = y; }
@@ -43,5 +43,7 @@ class Vehicle : public Raceable {
         this->width = 60;
     }
 
-    virtual void draw() = 0;
+    virtual bool operator==(const Raceable &r);
+
+    virtual void draw() const = 0;
 };

@@ -5,12 +5,12 @@
 class Raceable {
 
     public:
-    virtual int getXpos() = 0;
-    virtual int getYpos() = 0;
-    virtual int getSpeed() = 0;
-    virtual int getDirection() = 0;
-    virtual int getWidth() = 0;
-    virtual ofColor getColor() = 0;
+    virtual int getXpos() const = 0;
+    virtual int getYpos() const = 0;
+    virtual int getSpeed() const = 0;
+    virtual int getDirection() const = 0;
+    virtual int getWidth() const = 0;
+    virtual ofColor getColor() const = 0;
 
     virtual void setXpos(int x) = 0;
     virtual void setYPos(int y) = 0;
@@ -18,6 +18,8 @@ class Raceable {
     virtual void setDirection(int dir) = 0;
     virtual void setColor(ofColor col) = 0;
 
-    virtual void draw() = 0;
+    virtual bool operator==(const Raceable &r) = 0;
+
+    virtual void draw() const = 0;
 
 };
